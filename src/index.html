@@ -13,5 +13,161 @@
     <h1>Vanilla JavaScript App</h1>
   </main>
 </body>
+function multiplicar(){
+            m1 = document.getElementById("nap").value;
 
+            m3 = document.getElementById("peso").value;
+            m4 = document.getElementById("tipopte").value;
+            m5 = document.getElementById("sln").value;
+            m6 = document.getElementById("sln2").value;
+            m7 = document.getElementById("vel").value; 
+            r = ((m5-m1)/((m4*m3)+1))*-1;
+            v = ((m6-m1)/((m4*m3)+1))*-1;
+            s = m1-145 ;
+            t = s/r ;
+            w = s/v ;
+            h = s/m7;
+            u = t*1000/h;
+            z = w*1000/h;  
+            u50 =u*0.5;
+            z50= z*0.5;  
+            u25= u*0.25;
+            z75= z*0.75;  
+            u75= u*0.75;
+            z25= z*0.25;
+
+
+            document.getElementById("meqcorreg1").value = s;
+            document.getElementById("tiempo").value = Math.trunc(h);
+            document.getElementById("cch").value = Math.trunc(u);
+            document.getElementById("cch2").value = Math.trunc(z);
+            document.getElementById("cambiona1").value = r;
+            document.getElementById("volcorreg1").value = t;
+            document.getElementById("cambiona2").value = v;
+            document.getElementById("volcorreg2").value = w;
+
+            document.getElementById("cch_50_sln1").value = Math.trunc(u50);
+            document.getElementById("cch2_50_sln2").value = Math.trunc(z50);     
+            document.getElementById("cch_25_sln1").value = Math.trunc(u25);
+            document.getElementById("cch2_75_sln2").value = Math.trunc(z75);
+          }
+
+          </script>
+     
+
+          <div style="background-color:white">
+
+            <form id="multiplicar">     
+              <h4>Sodio del paciente (meq/L):</h4> 
+              <input type="number"  id="nap" max=8  min=5  onchange= "multiplicar();" value="0"/>
+              <h4>Peso del paciente (Kg):</h4>
+              <input id="peso" onchange="multiplicar();" max=8  min=5 type="number" value="0" /> 
+
+
+              <h4>Tipo de  Paciente (escoja):</h4>
+              <select id="tipopte" name="select" onchange="multiplicar();"> 
+              <option selected="" value="0.45">mujer anciana</option>
+              <option value="0.5">hombre anciano</option>
+              <option value="0.5">mujer joven</option>
+              <option value="0.6">hombre joven</option>
+              </select>
+               <br/>
+
+              <h4>Velocidad de correccion (escoja):</h4>
+              <select id="vel" name="select" onchange="multiplicar();" value="0">
+              <option selected="" value="0.5">0.5 meq/L/h</option>
+              <option value="1">1 meq/L/h</option>
+              </select>
+               <br/>
+
+
+
+
+
+              <H4>Sln 1 (escoja): &nbsp;&nbsp;&nbsp;&nbsp; Sln 2 (escoja):</H4>
+              <select id="sln" name="select" onchange="multiplicar();"> 
+              <option value="130">L. Ringer</option>
+              <option value="77">1/2 Isot 0.45%</option>
+              <option value="38.5">1/4 Isot 0.23%</option>
+              <option selected="" value="0">Dxt 5% en AD</option>
+              </select>
+              &nbsp;&nbsp;
+               <select id="sln2" name="select" onchange="multiplicar();"> 
+              <option value="130">L. Ringer</option>
+              <option selected="" value="77">1/2 Isot 0.45%</option>
+              <option value="38.5">1/4 Isot 0.23%</option>
+              <option value="0">Dxt 5% en AD</option>
+              </select>
+              <br/>
+              </div>
+
+
+
+           <div style="background-color:#faf5aa">
+                <h4 style="color: #000000">Resultados:</h4>
+
+
+            <div style="background-color:#faf5aa">    
+              Na+ a Corregir&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo<br/>
+
+              <input id="meqcorreg1" max=8  min=5 type="number" />&nbsp;meq&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input id="tiempo" max=8  min=5 type="number" />&nbsp;horas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <br/>
+
+              <h4> 1) Utilizar SOLO UNA :</h4>
+              Sln1  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sln2 
+              <br/>
+              <input  id="cch" max=8  min=5 type="number" />
+             (cc/h)&nbsp;&nbsp;
+              <input id="cch2" max=8  min=5 type="number" />
+             (cc/h)&nbsp;&nbsp; 
+               <br/>
+              <br/>
+              </div>
+             
+            <div style="background-color:#f0efdf">
+              <h4> 2) Opción MEZCLA de Soluciones:</h4>
+             Sln1 50%  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Sln2 50% <br/>
+              <input  id="cch_50_sln1" max=8  min=5 type="number" />
+             (cc/h)&nbsp;&nbsp;
+              <input id="cch2_50_sln2" max=8  min=5 type="number" />
+             (cc/h)&nbsp;&nbsp;  
+               <br/> <br/>
+              </div>
+
+            <div style="background-color:#F9F9F1">
+              Sln1 25%  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Sln2 75% <br/>
+              <input  id="cch_25_sln1" max=8  min=5 type="number" />
+             (cc/h)&nbsp;&nbsp;
+              <input id="cch2_75_sln2" max=8  min=5 type="number" />
+             (cc/h)&nbsp;&nbsp;  
+               <br/> <br/>
+              </div>
+  
+  
+   Δ Na por Litro de sln 1
+  <input id="cambiona1" max=8  min=5 type="number" />meq/L
+  <br/>
+  Vol. Requerido sln 1&nbsp;&nbsp;&nbsp;&nbsp;
+  <input id="volcorreg1" max=8  min=5 type="number" />L.
+  <br/>
+  Δ Na por Litro de sln 2</h6>
+  <input id="cambiona2" max=8  min=5 type="number" />meq/L
+  <br/>
+  Vol. Requerido sln 2&nbsp;&nbsp;&nbsp;&nbsp;
+  <input id="volcorreg2" max=8  min=5 type="number" />L.
+ 
+  <p style="background-color: #5b5b28; color: #f1f1f1">
+      Basado en Formula de: Adrogué HJ, Madias NE. Aiding fluid prescription for the dysnatremias. <A HREF="https://link.springer.com/article/10.1007/s001340050333"> Intensive Care Med. 1997 Mar;23(3):309-16. doi: 10.1007/s001340050333. </A>
+ <br/>   
+    Esta formula No es infalible, es  solo Una  guia que pueden ayudar al médico a implementar el plan de tratamiento seleccionado para pacientes con disnatremias.
+</p>
+
+
+
+.color1 { #cccc8c };
+.color2 { #fcf4ac };
+.color3 { #5b5b28 };
+.color4 { #949464 };
+.color5 { #ccccb4 };
 </html>
