@@ -19,3 +19,86 @@ main > h1 {
   text-align: center;
   font-size: 3.5em;
 }
+
+   #nap {
+                  width: 3em;
+                }
+
+
+                #peso {
+                  width: 3em;
+                }  
+
+
+                #tipopte {
+                  width: 11em;
+                  height: 1.8em;
+                }
+
+
+                 #vel {
+                  width: 9em;
+                }
+
+
+                #sln {
+                  width: 9em;
+                }
+
+                #sln2 {
+                  width: 9em;
+                }
+
+                #meqcorreg1 {
+                  width: 3em;
+                }
+
+
+                #tiempo {
+                  width: 3em;
+                }  
+
+
+                #cch{
+                  width: 3em;
+                }
+
+
+                #cch2 {
+                  width: 3em;
+                }      
+
+
+
+                #cambiona1 {
+                  width: 3em;
+                }    
+
+                #volcorreg1 {
+                  width: 3em;
+                }     
+
+
+                #cambiona2 {
+                  width: 3em;
+                }    
+
+                #volcorreg2 {
+                  width: 3em;
+                }     
+
+                  #cch_50_sln1{
+                  width: 3em;
+                }
+
+                   #cch2_50_sln2{
+                  width: 3em;
+                }
+
+                   #cch_25_sln1{
+                  width: 3em;
+                }
+
+                   #cch2_75_sln2{
+                  width: 3em;
+                }
